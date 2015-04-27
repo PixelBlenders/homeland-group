@@ -17,9 +17,11 @@
     <script src="js/jquery.nicescroll.plus.js"></script>
     <!--    <script src="js/skrollr.min.js"></script>-->
     <script src="js/jquery.scrolline.js"></script>
-    <script type="text/javascript" src="js/modernizr.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
     <!--    <script type="text/javascript" src="js/materialize.min.js"></script>-->
+     
     <script type="text/javascript" src="js/px.js"></script>
+
 </head>
 
 <body>
@@ -129,7 +131,48 @@
     <br>
     <br>
 
+<section id="contact" >
 
+				<form id="theForm" class="simform" autocomplete="off">
+				<h1> Contact Us</h1>
+					<div class="simform-inner">
+						<ol class="questions">
+							<li>
+								<span><label for="q1">Hi, there. What's your name?</label></span>
+								<input id="q1" name="q1" type="text"/>
+							</li>
+							<li>
+								<span><label for="q2">What's your email?</label></span>
+								<input id="q2" name="q2" type="text"/>
+							</li>
+							<li>
+								<span><label for="q3">Mind giving us your phonenumber so we can say hi?</label></span>
+								<input id="q3" name="q3" type="text"/>
+							</li>
+							<li>
+								<span><label for="q4">Do you eat your veggies?</label></span>
+								<input id="q4" name="q4" type="text"/>
+							</li>
+							<li>
+								<span><label for="q5">High much?</label></span>
+								<input id="q5" name="q5" type="text"/>
+							</li>
+							
+						</ol><!-- /questions -->
+						<button class="submit" type="submit">Send answers</button>
+						<div class="controls">
+							<button class="next"></button>
+							<div class="progress"></div>
+							<span class="number">
+								<span class="number-current"></span>
+								<span class="number-total"></span>
+							</span>
+							<span class="error-message"></span>
+						</div><!-- / controls -->
+					</div><!-- /simform-inner -->
+					<span class="final-message"></span>
+				</form><!-- /simform -->			
+			</section>
 
 
 
@@ -162,7 +205,31 @@
         </div>
     </section>
 
+<script type="text/javascript" src="js/classie.js"></script>
+     <script type="text/javascript" src="js/stepsForm.js"></script>
+     	<script>
+			var theForm = document.getElementById( 'theForm' );
+                        //disable form autocomplete
+                        theForm.setAttribute( "autocomplete", "off" );
 
+			new stepsForm( theForm, {
+				onSubmit : function( form ) {
+					// hide form
+					classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+
+					/*
+					form.submit()
+					or
+					AJAX request (maybe show loading indicator while we don't have an answer..)
+					*/
+
+					// let's just simulate something...
+					var messageEl = theForm.querySelector( '.final-message' );
+					messageEl.innerHTML = 'kthanxbye<3';
+					classie.addClass( messageEl, 'show' );
+				}
+			} );
+		</script>
 </body>
 
 </html>
