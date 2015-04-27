@@ -1,0 +1,210 @@
+body {
+    overflow-x: hidden;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+
+.container {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.navbar-lower {
+    height: 80px;
+    overflow: hidden;
+}
+
+.navbar-logo {
+    font-size: 2em;
+    color: #000;
+    padding: 20px;
+}
+
+.navbar-links {
+    text-align: right;
+    top: 30px;
+    position: fixed;
+    right: 15%;
+}
+
+.navbar-links a {
+    padding: 20px;
+    padding-top: 40px;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.4s ease;
+    margin: 0;
+}
+
+.navbar-links a:hover {
+    transform: scale(1.1);
+}
+
+.mast {
+    height: 550px;
+    width: 100%;
+    background-image: url('../img/mast.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 100;
+    /*    text-transform: uppercase;*/
+}
+
+.text {
+    border-left: 5px solid #ccc;
+    padding-left: 25px;
+    margin-left: 45px;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 1.4em;
+    color: #555;
+}
+
+section {
+    padding-top: 70px;
+}
+
+.bar {
+    height: 70px;
+    overflow: hidden;
+    background: #eeec;
+    margin-left: 50px;
+    border-left: 5px solid #ccc;
+    border-bottom: 1px solid #eee;
+}
+
+.bar-img {
+    overflow: hidden;
+    width: 60%;
+    margin-left: -10%;
+    height: 70px;
+    display: inline-block;
+    background-image: url('../img/mast.jpg');
+    transform: skewX(20deg);
+    transition: all 0.8s ease;
+}
+
+.bar-text {
+    padding: 20px;
+    padding-left: 40px;
+    font-weight: 100;
+    font-size: 30px;
+    position: relative;
+    top: -70px;
+    left: 50%;
+    width: 100%;
+    transition: all 0.8s ease;
+    display: block;
+    color: #555;
+}
+
+.bar:hover .bar-img {
+    transform: translateX(-400px);
+}
+
+.bar:hover .bar-text {
+    transform: translateX(-400px);
+}
+
+.bar:hover .reveal {
+    opacity: 1;
+}
+
+.reveal {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.btn {
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    text-decoration: none;
+    color: #555;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background: #eee;
+}
+
+.bar .btn {
+    position: relative;
+    top: -10px;
+    margin-left: 30px;
+}
+
+#links {
+    width: 100%;
+    background: #eee;
+}
+
+.card-1 {
+    width: 30%;
+    background: #fff;
+    margin-top: 40px;
+    display: inline-block;
+    margin-left: 3%;
+}
+
+.card-img {
+    background: #dd5643;
+    margin: 0;
+    height: 200px;
+    width: 100%;
+}
+
+.card-text {
+    line-height: 1.4em;
+    font-size: 18px;
+    padding: 20px;
+    color: #555;
+    text-align: justify;
+}
+
+.card-text h1 {
+    font-size: 28px;
+}
+
+.card-text .btn {
+    margin-left: 0px;
+}
+
+#footer {
+    background: #eee;
+}
+
+.grid3 {
+    width: 40%;
+    display: inline-block;
+}
+
+#copyright {
+    padding: 20px;
+}
+
+.px {
+    margin: auto;
+    color: #777;
+}
+
+.left2 {
+    margin-left: 15%;
+}
